@@ -25,18 +25,17 @@ param_dict = dict(
     kernel_size = [3],
     hidCNN = [50],
     hidRNN = [100],
-    dropout = [0.2],
-    highway_window = [56],
+    dropout = [0.2, 0.3, 0.4],
+    highway_window = [28, 42, 56],
     clip = [10.],
-    epochs = [100],
+    epochs = [200],
     batch_size =[8],
     seed = [54321],
     gpu = [0],
     cuda = [True],
     optim = ['adam'],
-    lr = [0.001],
+    lr = [0.01, 0.001, 0.0001],
     L1Loss = [False],
-    normalize = [0],
     skip = [7]
 )
 
