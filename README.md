@@ -12,5 +12,7 @@
 
 ### Usage
 An example with parameter grid search to run Cainiao is in `main_cainiao.py`.
-
+```
+python main_cainiao.py
+```
 
