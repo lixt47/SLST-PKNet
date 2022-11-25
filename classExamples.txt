@@ -1,8 +1,0 @@
-select distinct cid, pid, count(*) as cnt from orders group by cid,pid having cnt > 2;
-
-with y as (select distinct pid from orders where aid="a06"),      
-z as (select distinct cid, count(distinct x.pid) as cnt1 from orders as x inner join y on x.pid=y.pid group by x.cid),      
-o as (select count(distinct pid) as cnt2 from orders where aid="a06") 
-select distinct cid from z inner join o on z.cnt1=o.cnt2;
-
-select distinct cid from (select distinct cid, count(distinct x.pid) as cnt1 from orders as x inner join (select distinct pid from orders where aid="a06") as y on x.pid=y.pid group by x.cid) as z inner join (select count(distinct pid) as cnt2 from orders where aid="a06") as o on z.cnt1=o.cnt2;
