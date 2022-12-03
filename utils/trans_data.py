@@ -7,6 +7,15 @@ import numpy as np
 from scipy import stats
 import pandas as pd
 
+def get_dis(cur_date, skipArr):
+    skipDis = []
+    for k in skipArr:
+        new_date = datetime.date(cur_date.year, int(k[0:2]), int(l[2:4]))
+        new_days = (cur_date - new_date).days
+        if new_days > 0:
+            d = new_days / 15
+            skipDis.append(d)
+     return skipDis
 
 def feature_eng(in_file, input_T):
     sale_T = 14
