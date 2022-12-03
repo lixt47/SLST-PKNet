@@ -11,6 +11,7 @@ import pandas as pd
 def feature_eng(in_file, input_T):
     sale_T = 14
     data_list = {}
+    skipArr = ["0211", "0501", "0618", "1001", "1111", "1212"]
     f = csv.reader(open(in_file, 'r'))
     for line in f:
         now_date = datetime.date(int(line[0][0:4]), int(line[0][4:6]), int(line[0][6:8]))
