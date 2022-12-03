@@ -37,6 +37,7 @@ param_dict = dict(
     lr = [0.01, 0.001, 0.0001],
     L1Loss = [False],
     skip = [7]
+    skipArr = ["0211", "0501", "0618", "1001", "1111", "1212"]
 )
 
 if __name__ == '__main__':
