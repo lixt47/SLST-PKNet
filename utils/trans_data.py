@@ -15,7 +15,7 @@ def get_dis(cur_date, skipArr):
         if new_days > 0:
             d = int(new_days / 15)
             skipDis.append(d)
-     return skipDis
+    return skipDis
 
 def feature_eng(in_file, input_T):
     sale_T = 14
